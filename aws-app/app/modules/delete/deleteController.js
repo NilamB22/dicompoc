@@ -40,7 +40,7 @@ app.controller('DeleteCtrl', function ($scope, httpService, IP, $mdDialog, showP
             httpService.fetchHttp('DELETE', $scope.url, arr, 'application/json').then(
                 function (response) {
                     $scope.delloader = -1;
-                    showPopup.showAlert(ev, "File Deleted Succefully");
+                    showPopup.showAlert(ev, "File Deleted Successfully");
                     $scope.list = response.data;
                 },
                 function (error) {

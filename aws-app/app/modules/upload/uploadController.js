@@ -1,8 +1,8 @@
-app.controller('UploadCtrl', function ($scope, httpService, IP, Upload, showPopup) {
+app.controller('UploadCtrl', function ($scope, httpService, IP, Upload, showPopup,Bucket) {
 
     $scope.uploadFile = function (ev) {
         $scope.loader = true;
-        $scope.url = IP+"filemanagement/upload/ctdemobucket";
+        $scope.url = IP+"filemanagement/upload/"+Bucket;
 
         Upload.upload({
             url: $scope.url,
