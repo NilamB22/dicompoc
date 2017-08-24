@@ -1,0 +1,25 @@
+<div class="tbl_center" ng-show="isLoading">
+    <!-- MDL Container using class mdl-spinner -->
+    <div class="mdl-spinner mdl-js-spinner is-active">
+
+    </div>
+
+</div>
+<div class="tbl_center" ng-show="!isLoading && !showtable ">test
+    <span>No Data Found</span>
+</div>
+<table id="viewfile" border="1" class="tbl_center md-table custom_tbl" ng-show="showtable" ng-if="list">
+    <thead>
+    <tr>
+        <th>SR NO</th>
+        <th>NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in list">
+        <td>{{$index + 1}}</td>
+        <td>{{item}}</td>
+    </tr>
+    </tbody>
+</table>
+

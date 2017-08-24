@@ -1,0 +1,35 @@
+
+<div layout="row" layout-sm="column" layout-align="space-around" ng-show="isLoading" class="tbl_center">
+    <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+</div>
+<div  ng-show="showtable">
+<table id="deletefile"  border="1" class="tbl_center md-table custom_tbl">
+    <thead>
+    <tr>
+        <th>SR NO</th>
+        <th>NAME</th>
+        <th>ACTION</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in list">
+        <td>{{$index + 1}}</td>
+        <td>{{item}}</td>
+        <td>
+            <button ng-hide="delloader==$index" class="mdl-button mdl-js-button mdl-button--icon" ng-click="deleteFile($event,item,$index);">
+                <i class="material-icons">delete</i> <!-- class="material-icons"-->
+            </button>
+            <div ng-show="delloader==$index" class=""  style="margin-top:10%">
+                <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div class="tbl_center" ng-show="!showtable">
+    <span  ng-show="!isLoading">No Data Found</span>
+</div>
+
+
+

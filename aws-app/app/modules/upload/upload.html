@@ -1,0 +1,17 @@
+<div class="tbl_center" style="border:1px solid darkgrey; padding:25px">
+
+    <input type="text" ng-model="myFile.name" >
+
+    <input type="file" file-model="myFile"/>
+
+    <br/> <br/>
+        <button class="mdl-button mdl-js-button mdl-button--raised mui-btn--small mdl-button--colored"  ng-click="uploadFile($event)">
+            upload
+        </button>
+    <br>
+
+    <div ng-show="loader" class=""  style="margin-top:10%">
+        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    </div>
+
+</div>
